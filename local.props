@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <!-- Paths -->
+    <STS2GamePath>D:\Steam\steamapps\common\Slay the Spire 2</STS2GamePath>
+    <GodotExePath>C:\Program_ForUser\Godot_v4.5.1\Godot_v4.5.1-stable_mono_win64.exe</GodotExePath>
+    
+    <!-- Mod Metadata -->
+    <ModName>Luminous</ModName>
+    <ModDisplayName>测试MOD</ModDisplayName>
+    <ModAuthor>L</ModAuthor>
+    <ModVersion>0.0.1</ModVersion>
+  </PropertyGroup>
+</Project>

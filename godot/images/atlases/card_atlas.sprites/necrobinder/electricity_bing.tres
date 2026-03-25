@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bcktc0h"]
+
+[ext_resource type="Texture2D" uid="uid://cjuxux4tinwt4" path="res://resources/ElectricityBing.png" id="1_407iv"]
+
+[resource]
+atlas = ExtResource("1_407iv")
+region = Rect2(3, 0, 495, 371)
