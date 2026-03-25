@@ -11,7 +11,6 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Luminous.Cards;
 public sealed class ElectricityBing : CardModel {
-    public override CardPoolModel Pool => ModelDb.CardPool<IroncladCardPool>();
     public ElectricityBing(): base(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy) { }
 
     protected override IEnumerable<DynamicVar> CanonicalVars {

@@ -11,7 +11,6 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Luminous.Cards;
 
 public sealed class DeathHarvest : CardModel {
-    public override CardPoolModel Pool => ModelDb.CardPool<NecrobinderCardPool>();
     public DeathHarvest()
         : base(2, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies) {
     }
