@@ -15,7 +15,8 @@ public class HeavyBlade : CardModel {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(14, ValueProp.Move), new EnergyVar(3)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         StrengthPower? strength = this.Owner.Creature.GetPower<StrengthPower>();
-        await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue + this.DynamicVars.Energy.BaseValue * (strength!.Amount - 1)).Targeting(cardPlay.Target!).FromCard((CardModel)this).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        decimal damage = this.DynamicVars.Damage.BaseValue + this.DynamicVars.Energy.BaseValue * (strength?.Amount - 1 ?? 0);
+        await DamageCmd.Attack(damage).Targeting(cardPlay.Target!).FromCard((CardModel)this).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
     protected override void OnUpgrade() => this.DynamicVars.Energy.UpgradeValueBy(2);
 }
