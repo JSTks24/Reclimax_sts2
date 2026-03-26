@@ -14,7 +14,7 @@ public class HeavyBlade : CardModel {
     public HeavyBlade() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) { }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(14, ValueProp.Move), new EnergyVar(3)];
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource) {
-        if (Owner.Creature != dealer) {
+        if (Owner.Creature != dealer || cardSource != this) {
             return 0m;
         }
         StrengthPower? strength = Owner.Creature.GetPower<StrengthPower>();

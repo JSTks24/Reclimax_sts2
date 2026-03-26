@@ -1,7 +1,6 @@
 ﻿using HarmonyLib;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
-using MegaCrit.Sts2.Core.Nodes.Cards;
 using System.Reflection;
 
 namespace Luminous.Hook;
