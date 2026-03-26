@@ -11,10 +11,10 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Luminous.Cards;
 
 public sealed class DeathHarvest : CardModel {
+    public override CardPoolModel Pool => ModelDb.CardPool<IroncladCardPool>();
     public DeathHarvest()
         : base(2, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies) {
     }
-
     public override bool GainsBlock => true;
     public override IEnumerable<CardKeyword> CanonicalKeywords {
         get {
@@ -26,14 +26,12 @@ public sealed class DeathHarvest : CardModel {
             return (IEnumerable<DynamicVar>)[new DamageVar(4M, ValueProp.Move)];
         }
     }
-
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         DeathHarvest card = this;
         await CreatureCmd.TriggerAnim(card.Owner.Creature, "Attack", card.Owner.Character.AttackAnimDelay);
-        AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard((CardModel)card).TargetingAllOpponents(card.CombatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard((CardModel)card).TargetingAllOpponents(card.CombatState!).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         if (!base.Owner.Creature.IsDead)
             await CreatureCmd.Heal(card.Owner.Creature, (Decimal)attackCommand.Results.Sum<DamageResult>((Func<DamageResult, int>)(r => r.UnblockedDamage)));
     }
-
     protected override void OnUpgrade() => this.DynamicVars.Damage.UpgradeValueBy(2M);
 }

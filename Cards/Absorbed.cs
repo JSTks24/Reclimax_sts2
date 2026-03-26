@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace Luminous.Cards;
 
 class Absorbed : CardModel {
+    public override CardPoolModel Pool => ModelDb.CardPool<SilentCardPool>();
     public Absorbed() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
     protected override IEnumerable<DynamicVar> CanonicalVars {
         get {

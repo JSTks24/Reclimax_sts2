@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://2vvmncj2o4qv"]
+
+[ext_resource type="Texture2D" uid="uid://bpcm4ggh6k8ry" path="res://resources/HeavyBlade.png" id="1_8fb4c"]
+
+[resource]
+atlas = ExtResource("1_8fb4c")
+region = Rect2(1, 0, 497, 372)

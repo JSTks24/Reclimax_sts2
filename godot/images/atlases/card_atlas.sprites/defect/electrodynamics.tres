@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://15tpy18nqcg"]
+
+[ext_resource type="Texture2D" uid="uid://bs3evta0tiknw" path="res://resources/ElectroDynamics.png" id="1_svolj"]
+
+[resource]
+atlas = ExtResource("1_svolj")
+region = Rect2(0, 0, 500, 368)

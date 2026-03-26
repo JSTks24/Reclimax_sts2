@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using Luminous.Cards;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 
@@ -7,7 +6,7 @@ namespace Luminous.Hook;
 
 [HarmonyPatch(typeof(MegaCrit.Sts2.Core.Models.Characters.Necrobinder))]  // 替换为实际角色类名
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Necrobinder.StartingDeck), MethodType.Getter)]
-public static class Tx1 {
+public static class NecrobinderHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
         __result = new CardModel[10]
         {
@@ -26,7 +25,7 @@ public static class Tx1 {
 }
 [HarmonyPatch(typeof(MegaCrit.Sts2.Core.Models.Characters.Ironclad))]  // 替换为实际角色类名
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Ironclad.StartingDeck), MethodType.Getter)]
-public static class Tx2 {
+public static class IroncladHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
         __result = new CardModel[11]
         {
@@ -46,7 +45,7 @@ public static class Tx2 {
 }
 [HarmonyPatch(typeof(MegaCrit.Sts2.Core.Models.Characters.Silent))]  // 替换为实际角色类名
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Silent.StartingDeck), MethodType.Getter)]
-public static class Tx3 {
+public static class SilentHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
         __result = new CardModel[10]
         {
@@ -65,7 +64,7 @@ public static class Tx3 {
 }
 [HarmonyPatch(typeof(MegaCrit.Sts2.Core.Models.Characters.Regent))]  // 替换为实际角色类名
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Regent.StartingDeck), MethodType.Getter)]
-public static class Tx4 {
+public static class RegentHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
         __result = new CardModel[10]
         {
@@ -84,7 +83,7 @@ public static class Tx4 {
 }
 [HarmonyPatch(typeof(MegaCrit.Sts2.Core.Models.Characters.Defect))]  // 替换为实际角色类名
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Defect.StartingDeck), MethodType.Getter)]
-public static class TX5 {
+public static class DefectHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
         __result = new CardModel[10]
         {
