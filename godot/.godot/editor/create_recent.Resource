@@ -1,2 +1,0 @@
-AtlasTexture
-Texture2DRD
