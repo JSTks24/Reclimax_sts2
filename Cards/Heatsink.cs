@@ -11,7 +11,7 @@ namespace Luminous.Cards;
 
 public sealed class Heatsink : CardModel {
     public override CardPoolModel Pool => ModelDb.CardPool<DefectCardPool>();
-    public Heatsink() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
+    public Heatsink() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self) { }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         await PowerCmd.Apply<HeatsinkBuff>(this.Owner.Creature, this.DynamicVars.Cards.BaseValue, this.Owner.Creature, this);
