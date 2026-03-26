@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://f1k0ir072688"]
+
+[ext_resource type="Texture2D" uid="uid://yj5ugnv147ke" path="res://resources/Heatsink.png" id="1_nu1kr"]
+
+[resource]
+atlas = ExtResource("1_nu1kr")
+region = Rect2(0, 0, 500, 370)

@@ -1,0 +1,8 @@
+{
+	"HEATSINK_BUFF.title": "散热片",
+	"HEATSINK_BUFF.smartDescription": "每当你打出能力牌时，抽[blue]{Amount}[/blue]张牌。",
+	"HEATSINK_BUFF.description": "每当你打出能力牌时，抽[blue]{Amount}[/blue]张牌。",
+	"ELECTRODYNAMICS_BUFF.title": "电动力学",
+	"ELECTRODYNAMICS_BUFF.description": "[gold]闪电[/gold]充能球将攻击所有敌人",
+	"ELECTRODYNAMICS_BUFF.smartDescription": "[gold]闪电[/gold]充能球将攻击所有敌人"
+}
