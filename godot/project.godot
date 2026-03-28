@@ -1,8 +1,8 @@
 ﻿config_version=5
 
         [application]
-        config/name="Luminous"
+        config/name="Reclimax"
         config/features=PackedStringArray("4.5", "Forward Plus")
 
         [dotnet]
-        project/assembly_name="Luminous"
+        project/assembly_name="Reclimax"

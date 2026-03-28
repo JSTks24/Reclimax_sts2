@@ -1,0 +1,11 @@
+{
+	"BOTTLE_TORNADO.description": "拾起时，从[gold]牌组[/gold]中选择一张能力牌，为它[gold]附魔[/gold]：[purple]{Enchantment}[/purple]。",
+	"BOTTLE_TORNADO.flavor": "[red]这个遗物的细节不会揭晓……[/red]",
+	"BOTTLE_TORNADO.title": "瓶装飓风",
+	"BOTTLE_FIRE.description": "拾起时，从[gold]牌组[/gold]中选择一张攻击牌，为它[gold]附魔[/gold]：[purple]{Enchantment}[/purple]。",
+	"BOTTLE_FIRE.flavor": "[red]这个遗物的细节不会揭晓……[/red]",
+	"BOTTLE_FIRE.title": "瓶装火焰",
+	"BOTTLE_LIGHTENING.description": "拾起时，从[gold]牌组[/gold]中选择一张技能牌，为它[gold]附魔[/gold]：[purple]{Enchantment}[/purple]。",
+	"BOTTLE_LIGHTENING.flavor": "[red]这个遗物的细节不会揭晓……[/red]",
+	"BOTTLE_LIGHTENING.title": "瓶装闪电"
+}

@@ -5,9 +5,10 @@
     <GodotExePath>C:\Program_ForUser\Godot_v4.5.1\Godot_v4.5.1-stable_mono_win64.exe</GodotExePath>
     
     <!-- Mod Metadata -->
-    <ModName>Luminous</ModName>
-    <ModDisplayName>测试MOD</ModDisplayName>
-    <ModAuthor>L</ModAuthor>
-    <ModVersion>0.0.1</ModVersion>
+    <ModName>Reclimax</ModName>
+    <ModDisplayName>重返巅峰</ModDisplayName>
+    <ModAuthor>J^L</ModAuthor>
+    <ModVersion>1.0.0</ModVersion>
+    <ModDescription></ModDescription>
   </PropertyGroup>
 </Project>

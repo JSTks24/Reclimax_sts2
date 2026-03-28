@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dsxgo6c2ucc5l"]
+
+[ext_resource type="Texture2D" uid="uid://uk3i8iwiihef" path="res://resources/relics/bottlelightening.png" id="1_f6t3w"]
+
+[resource]
+atlas = ExtResource("1_f6t3w")
+region = Rect2(40, 34, 46, 59)
