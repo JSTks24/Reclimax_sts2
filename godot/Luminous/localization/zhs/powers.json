@@ -1,8 +1,13 @@
 {
 	"HEATSINK_BUFF.title": "散热片",
+	"HEATSINK_BUFF.description": "每当你打出能力牌时，抽对应数量的牌。",
 	"HEATSINK_BUFF.smartDescription": "每当你打出能力牌时，抽[blue]{Amount}[/blue]张牌。",
-	"HEATSINK_BUFF.description": "每当你打出能力牌时，抽[blue]{Amount}[/blue]张牌。",
 	"ELECTRODYNAMICS_BUFF.title": "电动力学",
 	"ELECTRODYNAMICS_BUFF.description": "[gold]闪电[/gold]充能球将攻击所有敌人",
-	"ELECTRODYNAMICS_BUFF.smartDescription": "[gold]闪电[/gold]充能球将攻击所有敌人"
+	"RAGEE_BUFF.title": "狂暴",
+	"RAGEE_BUFF.description": "回合开始时获得对应的费用。",
+	"RAGEE_BUFF.smartDescription": "回合开始时获得{Amount:energyIcons()}。",
+	"SELF_REPAIR_BUFF.title": "自我修复",
+	"SELF_REPAIR_BUFF.description": "战斗结束时，回复相应的生命",
+	"SELF_REPAIR_BUFF.smartDescription": "战斗结束时，回复[blue]{Amount}[/blue]点生命"
 }

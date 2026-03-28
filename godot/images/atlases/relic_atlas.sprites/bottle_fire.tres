@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dix2kqfeu1uvj"]
+
+[ext_resource type="Texture2D" uid="uid://b2dwll2chexc2" path="res://resources/relics/bottlefire.png" id="1_bpfyh"]
+
+[resource]
+atlas = ExtResource("1_bpfyh")
+region = Rect2(40, 35, 46, 58)
