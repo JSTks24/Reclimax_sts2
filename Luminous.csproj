@@ -182,6 +182,6 @@ dotnet/embed_build_outputs=false
     </PropertyGroup>
 
     <WriteLinesToFile File="$(ModManifestPath)" Lines="$(ModManifestContent)" Overwrite="true" Encoding="UTF-8" />
-    <Message Text="Generated manifest.json.json" Importance="high" />
+    <Message Text="Generated manifest.json" Importance="high" />
   </Target>
 </Project>

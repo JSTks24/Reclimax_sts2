@@ -1,0 +1,11 @@
+{
+	"BOTTLE_TORNADO.description": "Upon pickup, choose a Power card from your [gold]deck[/gold] and [gold]enchant[/gold] it with: [purple]{Enchantment}[/purple].",
+	"BOTTLE_TORNADO.flavor": "[red]The details of this relic will not be revealed...[/red]",
+	"BOTTLE_TORNADO.title": "Bottled Tornado",
+	"BOTTLE_FIRE.description": "Upon pickup, choose an Attack card from your [gold]deck[/gold] and [gold]enchant[/gold] it with: [purple]{Enchantment}[/purple].",
+	"BOTTLE_FIRE.flavor": "[red]The details of this relic will not be revealed...[/red]",
+	"BOTTLE_FIRE.title": "Bottled Flame",
+	"BOTTLE_LIGHTENING.description": "Upon pickup, choose a Skill card from your [gold]deck[/gold] and [gold]enchant[/gold] it with: [purple]{Enchantment}[/purple].",
+	"BOTTLE_LIGHTENING.flavor": "[red]The details of this relic will not be revealed...[/red]",
+	"BOTTLE_LIGHTENING.title": "Bottled Lightning"
+}
