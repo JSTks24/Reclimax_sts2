@@ -4,9 +4,12 @@
 
 A custom mod for *Slay the Spire 2* that brings back classic elements from the original game. 
 
-Many beloved cards and relics from *Slay the Spire 1* are currently missing in the sequel. This mod aims to restore them, allowing you to experience those classic builds and synergies once again.
+Many beloved cards and relics from *Slay the Spire 1* are currently missing in the sequel. This mod aims to restore them and also modifies the starting decks for all classes, allowing you to experience those classic builds and synergies once again with a fresh start.
 
 ## Features
+
+### Modified Starting Decks
+* Changed the starting cards for all classes/characters.
 
 ### Classic Cards Returned
 Brings back several iconic cards from the first game, including but not limited to:
