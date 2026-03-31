@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n6apnfatrtrr"
-path="res://.godot/imported/bottle_tornado.png-97a917587a9687cfce5a38b942ed9cfc.ctex"
+uid="uid://cjuxux4tinwt4"
+path="res://.godot/imported/CORE_SURGE.png-45c0694924b3438870c306af93120fbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/relics/bottle_tornado.png"
-dest_files=["res://.godot/imported/bottle_tornado.png-97a917587a9687cfce5a38b942ed9cfc.ctex"]
+source_file="res://resources/CORE_SURGE.png"
+dest_files=["res://.godot/imported/CORE_SURGE.png-45c0694924b3438870c306af93120fbe.ctex"]
 
 [params]
 

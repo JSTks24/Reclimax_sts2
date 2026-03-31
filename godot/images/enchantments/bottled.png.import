@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://scukgv0km776"
-path="res://.godot/imported/Absorbed.png-8ac2b1af4b51646bc319ecd69b3b4b37.ctex"
+uid="uid://cxrkgv26nuu2e"
+path="res://.godot/imported/bottled.png-4a1e95069d55bb2b66ea698764a95b15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Absorbed.png"
-dest_files=["res://.godot/imported/Absorbed.png-8ac2b1af4b51646bc319ecd69b3b4b37.ctex"]
+source_file="res://images/enchantments/bottled.png"
+dest_files=["res://.godot/imported/bottled.png-4a1e95069d55bb2b66ea698764a95b15.ctex"]
 
 [params]
 

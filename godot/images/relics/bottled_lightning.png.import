@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbnmoelxrrcn6"
-path="res://.godot/imported/bottle_lightening.png-46597c60fcf80464e42e2a2eb12c7b84.ctex"
+path="res://.godot/imported/bottled_lightning.png-957a99286f0fe1de76ef6e9af1791e3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/relics/bottle_lightening.png"
-dest_files=["res://.godot/imported/bottle_lightening.png-46597c60fcf80464e42e2a2eb12c7b84.ctex"]
+source_file="res://images/relics/bottled_lightning.png"
+dest_files=["res://.godot/imported/bottled_lightning.png-957a99286f0fe1de76ef6e9af1791e3f.ctex"]
 
 [params]
 

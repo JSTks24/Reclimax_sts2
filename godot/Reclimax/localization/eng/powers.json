@@ -4,9 +4,9 @@
 	"HEATSINK_BUFF.smartDescription": "Whenever you play a Power card, draw [blue]{Amount}[/blue] cards.",
 	"ELECTRODYNAMICS_BUFF.title": "Electrodynamics",
 	"ELECTRODYNAMICS_BUFF.description": "[gold]Lightning[/gold] Orbs hit ALL enemies.",
-	"RAGEE_BUFF.title": "Berserk",
-	"RAGEE_BUFF.description": "At the start of your turn, gain the corresponding amount of Energy.",
-	"RAGEE_BUFF.smartDescription": "At the start of your turn, gain {Amount:energyIcons()}.",
+	"BERSERK_BUFF.title": "Berserk",
+	"BERSERK_BUFF.description": "At the start of your turn, gain the corresponding amount of Energy.",
+	"BERSERK_BUFF.smartDescription": "At the start of your turn, gain {Amount:energyIcons()}.",
 	"SELF_REPAIR_BUFF.title": "Self Repair",
 	"SELF_REPAIR_BUFF.description": "At the end of combat, heal the corresponding amount of HP.",
 	"SELF_REPAIR_BUFF.smartDescription": "At the end of combat, heal [blue]{Amount}[/blue] HP."

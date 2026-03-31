@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjuxux4tinwt4"
-path="res://.godot/imported/ElectricityBing.png-f2fd2a4a18a83f2e7913980669ea2ba3.ctex"
+uid="uid://n6apnfatrtrr"
+path="res://.godot/imported/bottled_tornado.png-219f4cd57f5aa7d54c530d616a4f6154.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/ElectricityBing.png"
-dest_files=["res://.godot/imported/ElectricityBing.png-f2fd2a4a18a83f2e7913980669ea2ba3.ctex"]
+source_file="res://images/relics/bottled_tornado.png"
+dest_files=["res://.godot/imported/bottled_tornado.png-219f4cd57f5aa7d54c530d616a4f6154.ctex"]
 
 [params]
 

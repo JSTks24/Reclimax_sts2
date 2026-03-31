@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1u3mq26darfu"
-path="res://.godot/imported/DeathHarvest.png-4127b9a17805a954045824d72fe98e20.ctex"
+uid="uid://scukgv0km776"
+path="res://.godot/imported/CONCENTRATE.png-d6abda4af1fddf4f472e80763f0d00e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/DeathHarvest.png"
-dest_files=["res://.godot/imported/DeathHarvest.png-4127b9a17805a954045824d72fe98e20.ctex"]
+source_file="res://resources/CONCENTRATE.png"
+dest_files=["res://.godot/imported/CONCENTRATE.png-d6abda4af1fddf4f472e80763f0d00e1.ctex"]
 
 [params]
 

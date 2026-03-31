@@ -9,7 +9,7 @@
     <!-- <ModDisplayName>重返巅峰（Reclimax）</ModDisplayName> -->
     <ModDisplayName>Reclimax</ModDisplayName>
     <ModAuthor>J^L</ModAuthor>
-    <ModVersion>1.0.0</ModVersion>
+    <ModVersion>1.0.1</ModVersion>
     <ModDescription>A custom mod for Slay the Spire 2 that brings back classic elements from the original game.\n\nMany beloved cards and relics from Slay the Spire 1 are currently missing in the sequel. This mod aims to restore them and also modifies the starting decks for all classes, allowing you to experience those classic builds and synergies once again with a fresh start.</ModDescription>
     <!-- <ModDescription>为《杀戮尖塔2》(Slay the Spire 2) 制作的经典内容回归模组。\n\n在《杀戮尖塔2》中，许多一代玩家耳熟能详的卡牌和遗物并未登场。本模组致力于将这些经典的元素带回二代，让你能再次体验那些熟悉的流派与套路。同时，本模组还调整了所有职业的初始卡组，为你带来全新的开局体验。</ModDescription> -->
   </PropertyGroup>

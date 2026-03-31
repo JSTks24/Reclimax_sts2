@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxrkgv26nuu2e"
-path="res://.godot/imported/bottle.png-f11601317b5e763622303b2c91f3f98c.ctex"
+uid="uid://b1u3mq26darfu"
+path="res://.godot/imported/REAPER.png-d521af0f8f3e541bb07003f2540f893e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enchantments/bottle.png"
-dest_files=["res://.godot/imported/bottle.png-f11601317b5e763622303b2c91f3f98c.ctex"]
+source_file="res://resources/REAPER.png"
+dest_files=["res://.godot/imported/REAPER.png-d521af0f8f3e541bb07003f2540f893e.ctex"]
 
 [params]
 

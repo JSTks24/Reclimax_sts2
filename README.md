@@ -13,9 +13,9 @@ Many beloved cards and relics from *Slay the Spire 1* are currently missing in t
 
 ### Classic Cards Returned
 Brings back several iconic cards from the first game, including but not limited to:
-* **Ironclad**: Heavy Blade, Fiery Strike, Death Harvest, Rage
-* **Silent**: Catalyst, Terror
-* **Defect**: Electrodynamics, Heatsink, Self Repair
+* **Ironclad**: Heavy Blade, Searing Blow, Reaper, Berserk, Limit Break
+* **Silent**: Catalyst, Terror, Concentrate
+* **Defect**: Electrodynamics, Heatsink, Self Repair, Core Surge
 
 ### Classic Relics Returned
 * Bottled Flame
@@ -27,7 +27,6 @@ Brings back several iconic cards from the first game, including but not limited 
 > **Note:** This mod is actively being updated. More classic cards and relics from the original game will be added in future updates.
 
 ## Installation
-1. Ensure your *Slay the Spire 2* modding environment is set up.
-2. Download the latest release of **Reclimax**.
-3. Place the mod files into your game's `mods` folder.
-4. Launch the game and enable the mod.
+1. Download the latest release of **Reclimax**.
+2. Place the mod files into your game's `mods` folder.
+3. Launch the game and enable the mod.

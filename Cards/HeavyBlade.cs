@@ -18,7 +18,7 @@ public class HeavyBlade : CardModel {
             return 0m;
         }
         StrengthPower? strength = Owner.Creature.GetPower<StrengthPower>();
-        return DynamicVars.Energy.BaseValue * (strength?.Amount ?? 0);
+        return (DynamicVars.Energy.BaseValue - 1) * (strength?.Amount ?? 0);
     }
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).Targeting(cardPlay.Target!).FromCard((CardModel)this).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
