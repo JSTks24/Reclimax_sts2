@@ -9,9 +9,9 @@ using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Luminous.Cards;
 
-class Limited : CardModel {
+class LimitBreak : CardModel {
     public override CardPoolModel Pool => ModelDb.CardPool<IroncladCardPool>();
-    public Limited() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
+    public LimitBreak() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
     protected override IEnumerable<DynamicVar> CanonicalVars => base.CanonicalVars;
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<StrengthPower>()];

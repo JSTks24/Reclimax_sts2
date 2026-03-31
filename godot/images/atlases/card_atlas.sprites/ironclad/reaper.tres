@@ -1,6 +1,6 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b0rkd7tmn2v8k"]
 
-[ext_resource type="Texture2D" uid="uid://b1u3mq26darfu" path="res://resources/DeathHarvest.png" id="1_wp125"]
+[ext_resource type="Texture2D" uid="uid://b1u3mq26darfu" path="res://resources/REAPER.png" id="1_wp125"]
 
 [resource]
 atlas = ExtResource("1_wp125")

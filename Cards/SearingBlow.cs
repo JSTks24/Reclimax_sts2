@@ -7,9 +7,9 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Luminous.Cards;
-public sealed class FieryStrike : CardModel {
+public sealed class SearingBlow : CardModel {
     public override CardPoolModel Pool => ModelDb.CardPool<IroncladCardPool>();
-    public FieryStrike() : base(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy) { }
+    public SearingBlow() : base(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy) { }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(12, ValueProp.Move)];
     public override int MaxUpgradeLevel => int.MaxValue;
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {

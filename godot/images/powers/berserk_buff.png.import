@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djfby78jygph5"
-path="res://.godot/imported/ragee_buff.png-bf11415126c2e999fb28ba159f6924e0.ctex"
+path="res://.godot/imported/berserk_buff.png-5a2137993b18c124630e7828a164aa24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/powers/ragee_buff.png"
-dest_files=["res://.godot/imported/ragee_buff.png-bf11415126c2e999fb28ba159f6924e0.ctex"]
+source_file="res://images/powers/berserk_buff.png"
+dest_files=["res://.godot/imported/berserk_buff.png-5a2137993b18c124630e7828a164aa24.ctex"]
 
 [params]
 

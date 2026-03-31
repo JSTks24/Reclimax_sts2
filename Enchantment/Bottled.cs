@@ -4,7 +4,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 
 namespace Luminous.Enchantment;
-public sealed class Bottle : EnchantmentModel {
+public sealed class Bottled : EnchantmentModel {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Innate)];
     protected override void OnEnchant() => base.Card.AddKeyword(CardKeyword.Innate);
     public bool CusCanEnchant(CardModel card, RelicModel cls) {
@@ -19,11 +19,11 @@ public sealed class Bottle : EnchantmentModel {
         if (card.Enchantment != null && (!IsStackable || card.Enchantment.GetType() != GetType())) {
             return false;
         }
-        if (cls is BottleFire && card.Type == CardType.Attack)
+        if (cls is BottledFlame && card.Type == CardType.Attack)
             return true;
-        else if (cls is BottleLightening && card.Type == CardType.Skill)
+        else if (cls is BottledLightning && card.Type == CardType.Skill)
             return true;
-        else if (cls is BottleTornado && card.Type == CardType.Power)
+        else if (cls is BottledTornado && card.Type == CardType.Power)
             return true;
         return false;
     }

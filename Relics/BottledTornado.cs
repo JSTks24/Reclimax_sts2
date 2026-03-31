@@ -13,22 +13,22 @@ using MegaCrit.Sts2.Core.Nodes;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 
 namespace Luminous.Relics;
-public sealed class BottleLightening : RelicModel{
+public sealed class BottledTornado : RelicModel {
     public new RelicPoolModel Pool => ModelDb.RelicPool<SharedRelicPool>();
     public override RelicRarity Rarity => RelicRarity.Uncommon;
     public override bool HasUponPickupEffect => true;
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new CardsVar(1),
-        new StringVar("Enchantment", ModelDb.Enchantment<Bottle>().Title.GetFormattedText())
+        new StringVar("Enchantment", ModelDb.Enchantment<Bottled>().Title.GetFormattedText())
     ];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromEnchantment<Bottle>();
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromEnchantment<Bottled>();
     public override async Task AfterObtained() {
-        Bottle bottle = ModelDb.Enchantment<Bottle>();
+        Bottled bottle = ModelDb.Enchantment<Bottled>();
         List<CardModel> list = PileType.Deck.GetPile(base.Owner).Cards.Where((CardModel c) => bottle.CusCanEnchant(c, this)).ToList();
         CardModel cardModel = (await CardSelectCmd.FromDeckForEnchantment(prefs: new CardSelectorPrefs(CardSelectorPrefs.EnchantSelectionPrompt, 1), cards: list.UnstableShuffle(base.Owner.RunState.Rng.Niche).ToList(), enchantment: bottle, amount: 1)).FirstOrDefault();
         if (cardModel != null) {
-            CardCmd.Enchant<Bottle>(cardModel, 1m);
+            CardCmd.Enchant<Bottled>(cardModel, 1m);
             NCardEnchantVfx nCardEnchantVfx = NCardEnchantVfx.Create(cardModel);
             if (nCardEnchantVfx != null) {
                 NRun.Instance?.GlobalUi.CardPreviewContainer.AddChildSafely(nCardEnchantVfx);
@@ -36,4 +36,3 @@ public sealed class BottleLightening : RelicModel{
         }
     }
 }
-

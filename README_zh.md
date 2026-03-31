@@ -13,9 +13,9 @@
 
 ### 经典卡牌回归
 加入了一代中的部分经典卡牌，包含但不限于：
-* **战士**：重刃 (Heavy Blade)、炽热打击 (Fiery Strike)、死亡收割 (Death Harvest)、愤怒 (Rage) 等
-* **猎人**：催化剂 (Catalyst)、恐怖 (Terror) 等
-* **机器人**：电动力学 (Electrodynamics)、散热器 (Heatsink)、自我修复 (Self Repair) 等
+* **战士**：重刃 (Heavy Blade)、灼热打击 (Searing Blow)、死亡收割 (Reaper)、狂暴 (Berserk)、突破极限 (Limit Break)
+* **猎人**：催化剂 (Catalyst)、恐怖 (Terror)、全神贯注 (Concentrate)
+* **机器人**：电动力学 (Electrodynamics)、散热片 (Heatsink)、自我修复 (Self Repair)、核心电涌 (Core Surge)
 
 ### 经典遗物回归
 * 瓶装火焰 (Bottled Flame)
@@ -27,7 +27,6 @@
 > **📅 持续更新：** 本模组仍在活跃开发中，后续将会逐步把更多一代的经典卡牌与遗物移植到本作中。
 
 ## 安装说明
-1. 确保你已经配置好《杀戮尖塔2》的模组运行环境。
-2. 下载 **重返巅峰 (Reclimax)** 模组的最新版本。
-3. 将模组文件放入游戏目录下的 `mods` 文件夹中。
-4. 启动游戏并在模组列表中启用即可。
+1. 下载 **重返巅峰 (Reclimax)** 模组的最新版本。
+2. 将模组文件放入游戏目录下的 `mods` 文件夹中。
+3. 启动游戏并在模组列表中启用即可。

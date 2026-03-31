@@ -7,9 +7,9 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Luminous.Cards;
-public sealed class Terrorim : CardModel {
+public sealed class Terror : CardModel {
     public override CardPoolModel Pool => ModelDb.CardPool<SilentCardPool>();
-    public Terrorim() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.AnyEnemy) { }
+    public Terror() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.AnyEnemy) { }
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<VulnerablePower>(99)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
