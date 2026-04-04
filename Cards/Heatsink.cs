@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Combat;
+﻿using Luminous.Util;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -9,8 +10,8 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 
 namespace Luminous.Cards;
 
+[LuminousPool<DefectCardPool>]
 public sealed class Heatsink : CardModel {
-    public override CardPoolModel Pool => ModelDb.CardPool<DefectCardPool>();
     public Heatsink() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self) { }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {

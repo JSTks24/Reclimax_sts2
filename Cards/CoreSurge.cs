@@ -7,11 +7,13 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
+using Luminous.Util;
 
 
 namespace Luminous.Cards;
+
+[LuminousPool<DefectCardPool>]
 public sealed class CoreSurge : CardModel {
-    public override CardPoolModel Pool => ModelDb.CardPool<DefectCardPool>();
     public CoreSurge(): base(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy) { }
     protected override IEnumerable<DynamicVar> CanonicalVars {
         get {

@@ -2,7 +2,7 @@
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 
-namespace Luminous.Hook;
+namespace Luminous.Util;
 
 [HarmonyPatch(typeof(MegaCrit.Sts2.Core.Models.Characters.Necrobinder))]
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Necrobinder.StartingDeck), MethodType.Getter)]

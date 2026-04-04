@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.CardSelection;
+﻿using Luminous.Util;
+using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -8,8 +9,8 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 
 namespace Luminous.Cards;
 
+[LuminousPool<SilentCardPool>]
 class Concentrate : CardModel {
-    public override CardPoolModel Pool => ModelDb.CardPool<SilentCardPool>();
     public Concentrate() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
     protected override IEnumerable<DynamicVar> CanonicalVars {
         get {

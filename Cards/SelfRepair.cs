@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using Luminous.Util;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -8,8 +9,9 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Rooms;
 
 namespace Luminous.Cards;
+
+[LuminousPool<DefectCardPool>]
 public sealed class SelfRepair : CardModel {
-    public override CardPoolModel Pool => ModelDb.CardPool<DefectCardPool>();
     public SelfRepair() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self) { }
      protected override IEnumerable<DynamicVar> CanonicalVars => [new HealVar(7)];
      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {

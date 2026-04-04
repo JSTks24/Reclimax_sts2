@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using Luminous.Util;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -11,8 +12,8 @@ using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Luminous.Cards;
 
+[LuminousPool<IroncladCardPool>]
 public sealed class Berserk : CardModel {
-    public override CardPoolModel Pool => ModelDb.CardPool<IroncladCardPool>();
     public Berserk() : base(0, CardType.Power, CardRarity.Rare, TargetType.Self) { }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Binbong", 2), new EnergyVar(1)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {

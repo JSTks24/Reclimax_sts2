@@ -21,6 +21,6 @@
 	"SELF_REPAIR.description": "战斗结束时，回复{Heal:diff()}点生命。",
 	"TERROR.title": "恐怖",
 	"TERROR.description": "给予{VulnerablePower:diff()}层[gold]易伤[/gold]。",
-	"SEARING_BLOW.title": "灼热打击",
+	"SEARING_BLOW.title": "灼热攻击",
 	"SEARING_BLOW.description": "造成{Damage:diff()}点伤害。\n可以多次升级。"
 }

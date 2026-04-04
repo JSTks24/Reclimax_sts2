@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using Luminous.Util;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -13,8 +14,8 @@ using System.Reflection;
 
 namespace Luminous.Cards;
 
+[LuminousPool<DefectCardPool>]
 public sealed class Electrodynamics : CardModel {
-    public override CardPoolModel Pool => ModelDb.CardPool<DefectCardPool>();
     public Electrodynamics() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self) { }
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[2]
     {

@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using Luminous.Util;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -10,8 +11,8 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Luminous.Cards;
 
+[LuminousPool<IroncladCardPool>]
 public sealed class Reaper : CardModel {
-    public override CardPoolModel Pool => ModelDb.CardPool<IroncladCardPool>();
     public Reaper()
         : base(2, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies) {
     }

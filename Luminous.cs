@@ -8,5 +8,6 @@ public static class Luminous {
     public static void runHook() {
         Harmony harmony = new Harmony("Luminous");
         harmony.PatchAll();
+        Util.ModData.Init();
     }
 }
