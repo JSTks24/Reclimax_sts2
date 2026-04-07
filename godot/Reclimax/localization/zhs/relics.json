@@ -7,5 +7,8 @@
 	"BOTTLED_FLAME.title": "瓶装火焰",
 	"BOTTLED_LIGHTNING.description": "拾起时，从[gold]牌组[/gold]中选择一张技能牌，为它[gold]附魔[/gold]：[purple]{Enchantment}[/purple]。",
 	"BOTTLED_LIGHTNING.flavor": "[red]这个遗物的细节不会揭晓……[/red]",
-	"BOTTLED_LIGHTNING.title": "瓶装闪电"
+	"BOTTLED_LIGHTNING.title": "瓶装闪电",
+	"ORANGE_PELLETS.description": "只要你在同一回合内打出了能力牌、攻击牌和技能牌，消除你所有的负面状态。",
+	"ORANGE_PELLETS.flavor": "由高塔各处找到的多种真菌制成，它们能延缓任何病痛。",
+	"ORANGE_PELLETS.title": "橙色药丸"
 }

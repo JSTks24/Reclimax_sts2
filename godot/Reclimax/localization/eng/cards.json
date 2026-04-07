@@ -22,5 +22,9 @@
 	"TERROR.title": "Terror",
 	"TERROR.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
 	"SEARING_BLOW.title": "Searing Blow",
-	"SEARING_BLOW.description": "Deal {Damage:diff()} damage.\nCan be upgraded any number of times."
+	"SEARING_BLOW.description": "Deal {Damage:diff()} damage.\nCan be upgraded any number of times.",
+	"CORPSE_EXPLOSION.description": "Apply {PoisonPower:diff()} [gold]Poison[/gold].\nWhen this enemy dies, deal damage equal to its max HP to ALL enemies.",
+	"CORPSE_EXPLOSION.title": "Corpse Explosion",
+	"SPOT_WEAKNESS.description": "If an enemy intends to attack, gain {StrengthPower:diff()} [gold]Strength[/gold].",
+	"SPOT_WEAKNESS.title": "Spot Weakness"
 }

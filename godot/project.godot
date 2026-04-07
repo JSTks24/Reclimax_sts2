@@ -6,3 +6,8 @@
 
         [dotnet]
         project/assembly_name="Reclimax"
+
+        [rendering]
+
+        textures/vram_compression/import_s3tc_bptc=true
+        textures/vram_compression/import_etc2_astc=true

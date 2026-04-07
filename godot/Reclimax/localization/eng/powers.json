@@ -9,5 +9,7 @@
 	"BERSERK_BUFF.smartDescription": "At the start of your turn, gain {Amount:energyIcons()}.",
 	"SELF_REPAIR_BUFF.title": "Self Repair",
 	"SELF_REPAIR_BUFF.description": "At the end of combat, heal the corresponding amount of HP.",
-	"SELF_REPAIR_BUFF.smartDescription": "At the end of combat, heal [blue]{Amount}[/blue] HP."
+	"SELF_REPAIR_BUFF.smartDescription": "At the end of combat, heal [blue]{Amount}[/blue] HP.",
+	"CORPSE_EXPLOSION_POWER.title": "Corpse Explosion",
+  "CORPSE_EXPLOSION_POWER.description": "When this enemy dies, deal damage equal to its max HP to ALL enemies."
 }

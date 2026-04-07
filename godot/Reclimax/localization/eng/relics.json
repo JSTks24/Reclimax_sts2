@@ -7,5 +7,8 @@
 	"BOTTLED_FLAME.title": "Bottled Flame",
 	"BOTTLED_LIGHTNING.description": "Upon pickup, choose a Skill card from your [gold]deck[/gold] and [gold]enchant[/gold] it with: [purple]{Enchantment}[/purple].",
 	"BOTTLED_LIGHTNING.flavor": "[red]The details of this relic will not be revealed...[/red]",
-	"BOTTLED_LIGHTNING.title": "Bottled Lightning"
+	"BOTTLED_LIGHTNING.title": "Bottled Lightning",
+	"ORANGE_PELLETS.description": "Whenever you play a Power, Attack, and Skill in the same turn, remove all of your Debuffs.",
+	"ORANGE_PELLETS.flavor": "Manufactured from various fungi found throughout the Spire. Holds off any affliction.",
+	"ORANGE_PELLETS.title": "Orange Pellets"
 }

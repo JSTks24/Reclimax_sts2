@@ -64,6 +64,11 @@
 
         [dotnet]
         project/assembly_name="$(ModName)"
+
+        [rendering]
+
+        textures/vram_compression/import_s3tc_bptc=true
+        textures/vram_compression/import_etc2_astc=true
       </ProjectGodotContent>
     </PropertyGroup>
 
@@ -79,7 +84,7 @@
 
 [preset.0]
 
-name="Windows Desktop"
+name="All platform pck"
 platform="Windows Desktop"
 runnable=true
 advanced_options=false
@@ -104,7 +109,7 @@ custom_template/release=""
 debug/export_console_wrapper=1
 binary_format/embed_pck=false
 texture_format/s3tc_bptc=true
-texture_format/etc2_astc=false
+texture_format/etc2_astc=true
 shader_baker/enabled=false
 binary_format/architecture="x86_64"
 codesign/enable=false
@@ -159,7 +164,8 @@ dotnet/embed_build_outputs=false
   <Target Name="PostBuild" AfterTargets="Build">
     <MakeDir Directories="$(ModsOutputDir)" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModsOutputDir)" />
-    <Exec Command="&quot;$(GodotExePath)&quot; --headless --path &quot;$(GodotProject)&quot; --export-pack &quot;Windows Desktop&quot; &quot;$(ModsOutputDir)\$(ModName).pck&quot;" />
+    <RemoveDir Directories="$(GodotProject)\.godot" />
+    <Exec Command="&quot;$(GodotExePath)&quot; --headless --path &quot;$(GodotProject)&quot; --export-pack &quot;All platform pck&quot; &quot;$(ModsOutputDir)\$(ModName).pck&quot;" />
   </Target>
 
   <!-- Generate manifest.json.json -->

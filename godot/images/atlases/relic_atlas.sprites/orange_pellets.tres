@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cpdlp6gijrhoh"]
+
+[ext_resource type="Texture2D" uid="uid://dl6eqnq1lfxal" path="res://resources/relics/pellets.png" id="1_hd2hx"]
+
+[resource]
+atlas = ExtResource("1_hd2hx")
+region = Rect2(40, 34, 48, 60)
