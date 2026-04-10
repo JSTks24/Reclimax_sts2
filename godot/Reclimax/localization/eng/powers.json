@@ -11,5 +11,8 @@
 	"SELF_REPAIR_BUFF.description": "At the end of combat, heal the corresponding amount of HP.",
 	"SELF_REPAIR_BUFF.smartDescription": "At the end of combat, heal [blue]{Amount}[/blue] HP.",
 	"CORPSE_EXPLOSION_POWER.title": "Corpse Explosion",
-  "CORPSE_EXPLOSION_POWER.description": "When this enemy dies, deal damage equal to its max HP to ALL enemies."
+	"CORPSE_EXPLOSION_POWER.description": "When this enemy dies, deal damage equal to its max HP to ALL enemies.",
+	"BRUTALITY_POWER.description": "At the start of your turn, lose [blue]1[/blue] HP.\nDraw [blue]1[/blue] card.",
+	"BRUTALITY_POWER.smartDescription": "At the start of your turn, lose [blue]{SelfDamage}[/blue] HP.\nDraw [blue]{Amount}[/blue] cards.",
+	"BRUTALITY_POWER.title": "Brutality"
 }

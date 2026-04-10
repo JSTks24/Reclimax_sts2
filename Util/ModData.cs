@@ -1,5 +1,4 @@
-﻿using Luminous.Modify;
-using MegaCrit.Sts2.Core.Modding;
+﻿using MegaCrit.Sts2.Core.Modding;
 using MegaCrit.Sts2.Core.Models;
 using System.Reflection;
 
@@ -28,5 +27,7 @@ static class ModData {
                 ModHelper.AddModelToPool(attr.PoolType, type);
         }
     }
-    static public void Init() { }
+    static public void Init() {
+        ModConfMenu.SetSetting("StartingDeck", true);
+    }
 }

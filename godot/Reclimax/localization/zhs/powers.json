@@ -11,5 +11,8 @@
 	"SELF_REPAIR_BUFF.description": "战斗结束时，回复相应的生命",
 	"SELF_REPAIR_BUFF.smartDescription": "战斗结束时，回复[blue]{Amount}[/blue]点生命",
 	"CORPSE_EXPLOSION_POWER.title": "尸爆术",
-  "CORPSE_EXPLOSION_POWER.description": "当这名敌人死亡时，对所有敌人造成等同于其最大生命值的伤害。"
+	"CORPSE_EXPLOSION_POWER.description": "当这名敌人死亡时，对所有敌人造成等同于其最大生命值的伤害。",
+	"BRUTALITY_POWER.description": "在你的回合开始时，失去[blue]1[/blue]点生命。\n抽[blue]1[/blue]张牌",
+	"BRUTALITY_POWER.smartDescription": "在你的回合开始时，失去[blue]{SelfDamage}[/blue]点生命。\n抽[blue]{Amount}[/blue]张牌。",
+	"BRUTALITY_POWER.title": "残暴"
 }

@@ -1,6 +1,4 @@
 ﻿using HarmonyLib;
-using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 
@@ -10,6 +8,7 @@ namespace Luminous.Util;
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Necrobinder.StartingDeck), MethodType.Getter)]
 public static class NecrobinderHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
+        if (!ModConfMenu.GetSetting("StartingDeck")) return;
         __result = new CardModel[10]
         {
             (CardModel) ModelDb.Card<BoneShards>(),
@@ -29,6 +28,7 @@ public static class NecrobinderHook {
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Ironclad.StartingDeck), MethodType.Getter)]
 public static class IroncladHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
+        if (!ModConfMenu.GetSetting("StartingDeck")) return;
         __result = new CardModel[11]
         {
             (CardModel) ModelDb.Card<Feed>(),
@@ -49,6 +49,7 @@ public static class IroncladHook {
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Silent.StartingDeck), MethodType.Getter)]
 public static class SilentHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
+        if (!ModConfMenu.GetSetting("StartingDeck")) return;
         __result = new CardModel[10]
         {
             (CardModel) ModelDb.Card<StrikeSilent>(),
@@ -68,6 +69,7 @@ public static class SilentHook {
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Regent.StartingDeck), MethodType.Getter)]
 public static class RegentHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
+        if (!ModConfMenu.GetSetting("StartingDeck")) return;
         __result = new CardModel[10]
         {
             (CardModel) ModelDb.Card<CrushUnder>(),
@@ -87,6 +89,7 @@ public static class RegentHook {
 [HarmonyPatch(nameof(MegaCrit.Sts2.Core.Models.Characters.Defect.StartingDeck), MethodType.Getter)]
 public static class DefectHook {
     static void Postfix(ref IEnumerable<CardModel> __result) {
+        if (!ModConfMenu.GetSetting("StartingDeck")) return;
         __result = new CardModel[10]
         {
             (CardModel) ModelDb.Card<BallLightning>(),

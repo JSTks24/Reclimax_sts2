@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bbfckdyhei78u"]
+
+[ext_resource type="Texture2D" uid="uid://nb44le7rsvrp" path="res://resources/buff/brutality.png" id="1_0lc2t"]
+
+[resource]
+atlas = ExtResource("1_0lc2t")
+region = Rect2(11, 9, 27, 32)

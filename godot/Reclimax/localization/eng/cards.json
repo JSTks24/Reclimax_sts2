@@ -26,5 +26,9 @@
 	"CORPSE_EXPLOSION.description": "Apply {PoisonPower:diff()} [gold]Poison[/gold].\nWhen this enemy dies, deal damage equal to its max HP to ALL enemies.",
 	"CORPSE_EXPLOSION.title": "Corpse Explosion",
 	"SPOT_WEAKNESS.description": "If an enemy intends to attack, gain {StrengthPower:diff()} [gold]Strength[/gold].",
-	"SPOT_WEAKNESS.title": "Spot Weakness"
+	"SPOT_WEAKNESS.title": "Spot Weakness",
+	"CONSUME.title": "Consume",
+	"CONSUME.description": "Gain [blue]{FocusPower:diff()}[/blue] [gold]Focus[/gold].\nLose {OrbSlots:diff()} Orb slot.",
+	"BRUTALITY.title": "Brutality",
+	"BRUTALITY.description": "{IfUpgraded:show:[gold]Innate[/gold].\n|}At the start of your turn, lose 1 HP and draw [blue]{Cards:diff()}[/blue] card."
 }
