@@ -8,19 +8,23 @@
 
 ## 模组内容
 
+### 模组设置菜单
+* **自定义初始卡组**：新增了模组内配置菜单，玩家现在可以自由选择是否开启“修改各职业初始卡牌”的功能，满足不同的开局偏好。
+
 ### 初始卡组重置
-* 更改了所有职业（角色）的初始卡牌。
+* 更改了所有职业（角色）的初始卡牌（可在设置中开启或关闭）。
 
 ### 经典卡牌回归
 加入了一代中的部分经典卡牌，包含但不限于：
-* **战士**：重刃 (Heavy Blade)、灼热打击 (Searing Blow)、死亡收割 (Reaper)、狂暴 (Berserk)、突破极限 (Limit Break)
-* **猎人**：催化剂 (Catalyst)、恐怖 (Terror)、全神贯注 (Concentrate)
-* **机器人**：电动力学 (Electrodynamics)、散热片 (Heatsink)、自我修复 (Self Repair)、核心电涌 (Core Surge)
+* **战士**：重刃 (Heavy Blade)、灼热打击 (Searing Blow)、死亡收割 (Reaper)、狂暴 (Berserk)、突破极限 (Limit Break)、残暴 (Brutality)、发现弱点 (Spot Weakness)
+* **猎人**：催化剂 (Catalyst)、恐怖 (Terror)、全神贯注 (Concentrate)、尸爆术 (Corpse Explosion)
+* **机器人**：电动力学 (Electrodynamics)、散热片 (Heatsink)、自我修复 (Self Repair)、核心电涌 (Core Surge)、耗尽 (Consume)
 
 ### 经典遗物回归
 * 瓶装火焰 (Bottled Flame)
 * 瓶装闪电 (Bottled Lightning)
 * 瓶装旋风 (Bottled Tornado)
+* 橙色药丸 (Orange Pellets)
 
 *(附带了与瓶装遗物配套的附魔机制。)*
 

@@ -30,5 +30,5 @@
 	"CONSUME.title": "耗尽",
 	"CONSUME.description": "获得[blue]{FocusPower:diff()}[/blue]点[gold]集中[/gold]。\n失去{OrbSlots:diff()}个充能球栏位。",
 	"BRUTALITY.title": "残暴",
-	"BRUTALITY.description": "{IfUpgraded:show:[gold]固有[/gold]。\n|}回合开始时，失去1点生命，抽[blue]{Cards:diff()}[/blue]张牌。"
+	"BRUTALITY.description": "回合开始时，失去1点生命，抽[blue]{Cards:diff()}[/blue]张牌。"
 }

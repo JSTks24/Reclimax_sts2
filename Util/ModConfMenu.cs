@@ -41,7 +41,7 @@ public static class ModConfMenu {
 
             settingsBtn.Name = SettingsBtnName;
             settingsBtn.Position = new Vector2(settingsBtn.Position.X, 0);
-            settingsBtn.GetNode<MegaLabel>("Visuals/Label").SetTextAutoSize(new LocString("mod_config", "mod_setting_btn").GetFormattedText());
+            settingsBtn.GetNode<MegaLabel>("Visuals/Label").SetTextAutoSize(new LocString("settings_ui", "mod_setting_btn").GetFormattedText());
 
             settingsBtn.Visible = true;
 
@@ -62,7 +62,7 @@ public static class ModConfMenu {
                 Tickbox.IsTicked = setting.Value;
 
                 confRow.GetNodeOrNull<TextureRect>("PlatformIcon").Visible = false;
-                confRow.GetNodeOrNull<MegaRichTextLabel>("Title").SetTextAutoSize(new LocString("mod_config", setting.Key).GetFormattedText());
+                confRow.GetNodeOrNull<MegaRichTextLabel>("Title").SetTextAutoSize(new LocString("settings_ui", setting.Key).GetFormattedText());
 
                 Tickbox.Connect(NTickbox.SignalName.Toggled, Callable.From<NTickbox>((_) => {
                     ModSettings[setting.Key] = Tickbox.IsTicked;

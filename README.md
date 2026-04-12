@@ -8,19 +8,23 @@ Many beloved cards and relics from *Slay the Spire 1* are currently missing in t
 
 ## Features
 
+### Mod Configuration Menu
+* **Customizable Starting Decks**: Added an in-game mod menu where you can toggle whether to modify the starting decks for all classes, giving you full control over your starting experience.
+
 ### Modified Starting Decks
-* Changed the starting cards for all classes/characters.
+* Changed the starting cards for all classes/characters (can be turned on/off in the settings).
 
 ### Classic Cards Returned
 Brings back several iconic cards from the first game, including but not limited to:
-* **Ironclad**: Heavy Blade, Searing Blow, Reaper, Berserk, Limit Break
-* **Silent**: Catalyst, Terror, Concentrate
-* **Defect**: Electrodynamics, Heatsink, Self Repair, Core Surge
+* **Ironclad**: Heavy Blade, Searing Blow, Reaper, Berserk, Limit Break, Brutality, Spot Weakness
+* **Silent**: Catalyst, Terror, Concentrate, Corpse Explosion
+* **Defect**: Electrodynamics, Heatsink, Self Repair, Core Surge, Consume
 
 ### Classic Relics Returned
 * Bottled Flame
 * Bottled Lightning
 * Bottled Tornado
+* Orange Pellets
 
 *(Includes corresponding enchantment mechanics for the bottle relics.)*
 

@@ -30,5 +30,5 @@
 	"CONSUME.title": "Consume",
 	"CONSUME.description": "Gain [blue]{FocusPower:diff()}[/blue] [gold]Focus[/gold].\nLose {OrbSlots:diff()} Orb slot.",
 	"BRUTALITY.title": "Brutality",
-	"BRUTALITY.description": "{IfUpgraded:show:[gold]Innate[/gold].\n|}At the start of your turn, lose 1 HP and draw [blue]{Cards:diff()}[/blue] card."
+	"BRUTALITY.description": "At the start of your turn, lose 1 HP and draw [blue]{Cards:diff()}[/blue] card."
 }
