@@ -30,8 +30,8 @@ public static class ModConfMenu {
             return;
 
         var parentPanel = imageNode.GetParent();
-        var settingsBtn = parentPanel.GetNodeOrNull<NButton>(SettingsBtnName);
-        var settingsPanel = parentPanel.GetNodeOrNull<PanelContainer>(SettingsPanelName);
+        var settingsBtn = imageNode.GetNodeOrNull<NButton>(SettingsBtnName);
+        var settingsPanel = imageNode.GetNodeOrNull<PanelContainer>(SettingsPanelName);
 
         if (settingsBtn == null) {
             var templateBtn = __instance.Owner.GetNodeOrNull<NButton>("%GetModsButton");
