@@ -15,7 +15,7 @@ public sealed class SearingBlow : CardModel {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(12, ValueProp.Move)];
     public override int MaxUpgradeLevel => int.MaxValue;
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
-        await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).Targeting(cardPlay.Target!).FromCard((CardModel)this).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).Targeting(cardPlay.Target!).FromCard((CardModel)this,null).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
     protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(4 + CurrentUpgradeLevel);
 }

@@ -15,7 +15,7 @@ public sealed class SelfRepair : CardModel {
     public SelfRepair() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self) { }
      protected override IEnumerable<DynamicVar> CanonicalVars => [new HealVar(7)];
      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
-        await PowerCmd.Apply<SelfRepairBuff>(Owner.Creature, DynamicVars.Heal.BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<SelfRepairBuff>(choiceContext,Owner.Creature, DynamicVars.Heal.BaseValue, Owner.Creature, this);
      }
      protected override void OnUpgrade() => this.DynamicVars.Heal.UpgradeValueBy(3);
 }

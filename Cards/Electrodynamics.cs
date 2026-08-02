@@ -25,7 +25,7 @@ public sealed class Electrodynamics : CardModel {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("LightingBall", 2)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         for (int i = 0; i < this.DynamicVars["LightingBall"].BaseValue; i++) {
-            await PowerCmd.Apply<ElectrodynamicsBuff>(this.Owner.Creature, 1m, this.Owner.Creature, this);
+            await PowerCmd.Apply<ElectrodynamicsBuff>(choiceContext,this.Owner.Creature, 1m, this.Owner.Creature, this);
             await OrbCmd.Channel<LightningOrb>(choiceContext, base.Owner);
         }
     }
@@ -39,20 +39,33 @@ public sealed class ElectrodynamicsBuff : PowerModel {
 
 [HarmonyLib.HarmonyPatch(typeof(LightningOrb), "ApplyLightningDamage")]
 class LightningOrbHoverPatch {
-    public static bool Prefix(LightningOrb __instance, ref Task<IEnumerable<Creature>> __result, decimal value, Creature? target, PlayerChoiceContext choiceContext) {
+    public static bool Prefix(LightningOrb __instance, ref Task<IEnumerable<Creature>> __result, decimal value, Creature? target, PlayerChoiceContext choiceContext, bool isEvoke) {
         bool has_buff = __instance.Owner.Creature.GetPower<ElectrodynamicsBuff>() != null;
         if (has_buff) {
-            List<Creature> list = (from e in __instance.CombatState.GetOpponentsOf(__instance.Owner.Creature)
-                                where e.IsHittable
-                                select e).ToList();
-            __result = Task.FromResult<IEnumerable<Creature>>(list);
-            foreach (Creature item in list) {
-                VfxCmd.PlayOnCreature(item, "vfx/vfx_attack_lightning");
-            }
-            typeof(OrbModel).GetMethod("PlayEvokeSfx", BindingFlags.Instance | BindingFlags.NonPublic)?.Invoke(__instance, null);
-            CreatureCmd.Damage(choiceContext, list, value, ValueProp.Unpowered, __instance.Owner.Creature);
+            __result = StrikeAllOpponents(__instance, value, choiceContext, isEvoke);
             return false;
         }
         return true;
+    }
+
+    // IMPORTANT: the damage must be awaited inside the hook. The game is a deterministic
+    // lockstep simulation, and the combat checksum right after the orb triggers is compared
+    // between peers. Fire-and-forget damage races that checksum and desyncs multiplayer.
+    private static async Task<IEnumerable<Creature>> StrikeAllOpponents(LightningOrb __instance, decimal value, PlayerChoiceContext choiceContext, bool isEvoke) {
+        List<Creature> list = (from e in __instance.CombatState.GetOpponentsOf(__instance.Owner.Creature)
+                            where e.IsHittable
+                            select e).ToList();
+        if (list.Count == 0) {
+            return Array.Empty<Creature>();
+        }
+        if (isEvoke) {
+            __instance.ActivateEvoke(list.ToArray());
+        }
+        foreach (Creature item in list) {
+            VfxCmd.PlayOnCreature(item, "vfx/vfx_attack_lightning");
+        }
+        typeof(OrbModel).GetMethod("PlayEvokeSfx", BindingFlags.Instance | BindingFlags.NonPublic)?.Invoke(__instance, null);
+        await CreatureCmd.Damage(choiceContext, list, value, ValueProp.Unpowered, __instance.Owner.Creature);
+        return list;
     }
 }

@@ -17,9 +17,9 @@ public sealed class Berserk : CardModel {
     public Berserk() : base(0, CardType.Power, CardRarity.Rare, TargetType.Self) { }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Binbong", 2), new EnergyVar(1)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
-        await PowerCmd.Apply<VulnerablePower>(Owner.Creature, DynamicVars["Binbong"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<VulnerablePower>(choiceContext,Owner.Creature, DynamicVars["Binbong"].BaseValue, Owner.Creature, this);
         Owner.Creature.GetPower<VulnerablePower>()!.SkipNextDurationTick = false;
-        await PowerCmd.Apply<BerserkBuff>(Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<BerserkBuff>(choiceContext,Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
     }
     protected override void OnUpgrade() => DynamicVars["Binbong"].UpgradeValueBy(-1);
 }

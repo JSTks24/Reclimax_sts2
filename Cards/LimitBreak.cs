@@ -19,7 +19,7 @@ class LimitBreak : CardModel {
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         StrengthPower? strength = this.Owner.Creature.GetPower<StrengthPower>();
         if (strength != null) {
-            await PowerCmd.ModifyAmount(strength, strength.Amount, Owner.Creature, this);
+            await PowerCmd.ModifyAmount(choiceContext,strength, strength.Amount, Owner.Creature, this);
         }
     }
     protected override void OnUpgrade() => RemoveKeyword(CardKeyword.Exhaust);

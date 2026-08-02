@@ -15,7 +15,7 @@ public sealed class SpotWeakness : CardModel {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<StrengthPower>(3)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         if (cardPlay.Target.Monster.IntendsToAttack) {
-            await PowerCmd.Apply<StrengthPower>(Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<StrengthPower>(choiceContext,Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, Owner.Creature, this);
         }
     }
     protected override void OnUpgrade() => DynamicVars["StrengthPower"].UpgradeValueBy(1);

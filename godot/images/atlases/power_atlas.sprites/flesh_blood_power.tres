@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dvtnysahq32sp"]
+
+[ext_resource type="Texture2D" uid="uid://dr0jio3llglqv" path="res://images/powers/flesh_blood_power.png" id="1_jlibj"]
+
+[resource]
+atlas = ExtResource("1_jlibj")
+region = Rect2(8, 8, 236, 229)

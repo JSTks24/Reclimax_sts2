@@ -15,7 +15,7 @@ namespace Luminous.Cards;
 public class HeavyBlade : CardModel {
     public HeavyBlade() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy) { }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(14, ValueProp.Move), new EnergyVar(3)];
-    public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource) {
+    public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource,CardPlay? cardPlay) {
         if (Owner.Creature != dealer || cardSource != this || !(props.HasFlag(ValueProp.Move) && !props.HasFlag(ValueProp.Unpowered))) {
             return 0m;
         }
@@ -23,7 +23,7 @@ public class HeavyBlade : CardModel {
         return (DynamicVars.Energy.BaseValue - 1) * (strength?.Amount ?? 0);
     }
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
-        await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).Targeting(cardPlay.Target!).FromCard((CardModel)this).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).Targeting(cardPlay.Target!).FromCard((CardModel)this,null).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
     protected override void OnUpgrade() => this.DynamicVars.Energy.UpgradeValueBy(2);
 }

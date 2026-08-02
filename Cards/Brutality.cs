@@ -16,10 +16,10 @@ namespace Luminous.Cards;
 
 [LuminousPool<IroncladCardPool>]
 public sealed class Brutality : CardModel {
-    public Brutality() : base(0, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
+    public Brutality() : base(0, CardType.Power, CardRarity.Rare, TargetType.Self) { }
      protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
      protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
-        (await PowerCmd.Apply<BrutalityPower>(base.Owner.Creature, base.DynamicVars.Cards.BaseValue, base.Owner.Creature, this))?.IncrementSelfDamage();
+        (await PowerCmd.Apply<BrutalityPower>(choiceContext,base.Owner.Creature, base.DynamicVars.Cards.BaseValue, base.Owner.Creature, this))?.IncrementSelfDamage();
     }
      protected override void OnUpgrade() => AddKeyword(CardKeyword.Innate);
 }
@@ -33,7 +33,7 @@ public sealed class BrutalityPower : PowerModel {
             NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NFireSmokePuffVfx.Create(base.Owner));
             await Cmd.CustomScaledWait(0.2f, 0.4f);
             DamageVar damageVar = (DamageVar)base.DynamicVars["SelfDamage"];
-            await CreatureCmd.Damage(choiceContext, base.Owner, damageVar.BaseValue, damageVar.Props, base.Owner, null);
+            await CreatureCmd.Damage(choiceContext, base.Owner, damageVar.BaseValue, damageVar.Props, null, null);
         }
     }
     public void IncrementSelfDamage() {

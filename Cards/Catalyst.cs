@@ -17,7 +17,7 @@ public class Catalyst : CardModel {
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         PoisonPower? poison = cardPlay.Target!.GetPower<PoisonPower>();
         if (poison != null) {
-            await PowerCmd.ModifyAmount(poison, poison.Amount * (this.DynamicVars["Aminous"].BaseValue - 1), Owner.Creature, this);
+            await PowerCmd.ModifyAmount(choiceContext,poison, poison.Amount * (this.DynamicVars["Aminous"].BaseValue - 1), Owner.Creature, this);
         }
     }
     protected override void OnUpgrade() => this.DynamicVars["Aminous"].UpgradeValueBy(1);

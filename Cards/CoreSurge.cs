@@ -28,8 +28,8 @@ public sealed class CoreSurge : CardModel {
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         CoreSurge card = this;
         await CreatureCmd.TriggerAnim(card.Owner.Creature, "Attack", card.Owner.Character.AttackAnimDelay);
-        AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).Targeting(cardPlay.Target!).FromCard((CardModel)card).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-        await PowerCmd.Apply<ArtifactPower>(card.Owner.Creature, card.DynamicVars["ArtifactPower"].BaseValue, card.Owner.Creature, card);
+        AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).Targeting(cardPlay.Target!).FromCard((CardModel)card,null).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        await PowerCmd.Apply<ArtifactPower>(choiceContext,card.Owner.Creature, card.DynamicVars["ArtifactPower"].BaseValue, card.Owner.Creature, card);
     }
     protected override void OnUpgrade() => this.DynamicVars.Damage.UpgradeValueBy(4M);
 }

@@ -3,9 +3,9 @@ using MegaCrit.Sts2.Core.Modding;
 
 namespace Luminous;
 
-[ModInitializer("runHook")]
+[ModInitializer("Initialize")]
 public static class Luminous {
-    public static void runHook() {
+    public static void Initialize() {
         Util.ModData.Init();
         Harmony harmony = new Harmony("Luminous");
         harmony.PatchAll();

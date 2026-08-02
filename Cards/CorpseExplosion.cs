@@ -17,8 +17,8 @@ public sealed class CorpseExplosion : CardModel {
     public CorpseExplosion() : base(2, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy) { }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(6)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
-        await PowerCmd.Apply<PoisonPower>(cardPlay.Target, base.DynamicVars["PoisonPower"].BaseValue, Owner.Creature, this);
-        await PowerCmd.Apply<CorpseExplosionPower>(cardPlay.Target, base.DynamicVars["PoisonPower"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<PoisonPower>(choiceContext,cardPlay.Target, base.DynamicVars["PoisonPower"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<CorpseExplosionPower>(choiceContext,cardPlay.Target, base.DynamicVars["PoisonPower"].BaseValue, Owner.Creature, this);
     }
     protected override void OnUpgrade() => DynamicVars["PoisonPower"].UpgradeValueBy(3);
 }
@@ -30,7 +30,8 @@ public sealed class CorpseExplosionPower : PowerModel {
         if (Owner == creature) {
             Flash();
             VfxCmd.PlayOnCreatureCenters(Applier.CombatState.HittableEnemies, "vfx/vfx_attack_slash");
-            await CreatureCmd.Damage(choiceContext, Applier.CombatState.HittableEnemies, Owner.MaxHp, ValueProp.Unpowered, null, null);
+            await CreatureCmd.Damage(choiceContext, Applier.CombatState.HittableEnemies, Owner.MaxHp, ValueProp.Unpowered, Applier);
+            
         }
     }
 }

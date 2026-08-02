@@ -15,7 +15,8 @@
     <ModDisplayName Condition="'$(ModDisplayName)' == ''">Example Mod</ModDisplayName>
     <ModAuthor Condition="'$(ModAuthor)' == ''">Unknown</ModAuthor>
     <ModVersion Condition="'$(ModVersion)' == ''">1.0.0</ModVersion>
-    <ModDescription Condition="$(ModDescription) == ''">Nothing</ModDescription>
+    <ModDescription Condition="'$(ModDescription)' == ''">Nothing</ModDescription>
+    <IncludeCustom Condition="'$(IncludeCustom)' == ''">false</IncludeCustom>
 
     <AssemblyName>$(ModName)</AssemblyName>
     <Version>$(ModVersion)</Version>
@@ -24,6 +25,10 @@
     <ModsOutputDir>$(STS2GamePath)\mods\$(ModName)</ModsOutputDir>
     <GameDataDir>$(STS2GamePath)\data_sts2_windows_x86_64</GameDataDir>
     <GodotProject>$(ProjectDir)godot</GodotProject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IncludeCustom)' == 'true'">
+    <DefineConstants>ANGEL_COURTYARD</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>

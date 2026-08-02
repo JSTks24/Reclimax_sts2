@@ -15,7 +15,7 @@ public sealed class Terror : CardModel {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<VulnerablePower>(99)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
-        await PowerCmd.Apply<VulnerablePower>(cardPlay.Target!, DynamicVars["VulnerablePower"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<VulnerablePower>(choiceContext,cardPlay.Target!, DynamicVars["VulnerablePower"].BaseValue, Owner.Creature, this);
     }
     protected override void OnUpgrade() => EnergyCost.UpgradeBy(-1);
 }

@@ -20,7 +20,7 @@ public sealed class Consume : CardModel {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<FocusPower>()];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         OrbCmd.RemoveSlots(base.Owner, base.DynamicVars["OrbSlots"].IntValue);
-        await PowerCmd.Apply<FocusPower>(base.Owner.Creature, base.DynamicVars["FocusPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<FocusPower>(choiceContext,base.Owner.Creature, base.DynamicVars["FocusPower"].BaseValue, base.Owner.Creature, this);
     }
     protected override void OnUpgrade() => DynamicVars["FocusPower"].UpgradeValueBy(1);
 }

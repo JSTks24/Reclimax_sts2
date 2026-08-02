@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c75fu5gsmbnea"]
+
+[ext_resource type="Texture2D" uid="uid://c2ni8mj235b0v" path="res://resources/FleshBlood.jpg" id="1_tcaem"]
+
+[resource]
+atlas = ExtResource("1_tcaem")
+region = Rect2(0, 0, 623, 496)

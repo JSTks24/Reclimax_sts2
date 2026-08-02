@@ -30,9 +30,9 @@ public sealed class Reaper : CardModel {
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay) {
         Reaper card = this;
         await CreatureCmd.TriggerAnim(card.Owner.Creature, "Attack", card.Owner.Character.AttackAnimDelay);
-        AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard((CardModel)card).TargetingAllOpponents(card.CombatState!).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard((CardModel)card,null).TargetingAllOpponents(card.CombatState!).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         if (!base.Owner.Creature.IsDead)
-            await CreatureCmd.Heal(card.Owner.Creature, (Decimal)attackCommand.Results.Sum<DamageResult>((Func<DamageResult, int>)(r => r.UnblockedDamage)));
+            await CreatureCmd.Heal(card.Owner.Creature, attackCommand.Results.SelectMany(r => r).Sum(r => r.UnblockedDamage));
     }
     protected override void OnUpgrade() => this.DynamicVars.Damage.UpgradeValueBy(2M);
 }
